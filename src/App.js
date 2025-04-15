@@ -8,25 +8,6 @@ function App() {
   const API_URL = 'https://to-do-api-nt50.onrender.com/';
 
   useEffect(() => {
-    const fetchTasks = async () => {
-      try {
-        const response = await fetch('https://to-do-api-nt50.onrender.com/tasks');
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log('Dados recebidos:', data); // Verifique no console
-        setTasks(data);
-        
-      } catch (error) {
-        console.error('Falha ao buscar tarefas:', error);
-        // Adicione feedback visual para o usuário
-        alert('Erro ao carregar tarefas. Verifique o console para detalhes.');
-      }
-    };
-  
     fetchTasks();
   }, []);
 
