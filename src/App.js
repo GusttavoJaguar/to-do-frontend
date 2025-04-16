@@ -5,7 +5,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
 
-  const API_URL = 'to-do-api-nt50.onrender.com';
+  const API_URL = 'https://to-do-api-nt50.onrender.com/';
 
   useEffect(() => {
     fetchTasks();
